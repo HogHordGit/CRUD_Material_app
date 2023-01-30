@@ -2,8 +2,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { ProductInterface } from '../types/product.interface';
+import { environment } from "environments/environment.prod";
 
-const url: string = "https://ng-material-crud---25-01-23-default-rtdb.europe-west1.firebasedatabase.app/productsList";
+const url: string = `${environment.apiUrl}/productsList`;
 const httpOptions = {headers: new HttpHeaders({"Content-Type": "application/json"})};
 
 @Injectable({
