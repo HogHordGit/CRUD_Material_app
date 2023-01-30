@@ -57,8 +57,8 @@ export class AppComponent implements OnInit {
     });
   }
 
-  deleteProduct(id: number) {
-    this.http.deleteData(id).subscribe({
+  deleteProduct(key: string) {
+    this.http.deleteData(key).subscribe({
       next: (_) => {
         console.log("deleted successfuly");
         this.getAllData();

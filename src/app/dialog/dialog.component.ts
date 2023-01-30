@@ -43,9 +43,9 @@ export class DialogComponent implements OnInit {
 
   updateProduct(): void {
     if (this.form.invalid) return;
-    if (!this.editData?.id) return;
+    if (!this.editData?.key) return;
 
-    this.http.updateData(this.form.value, this.editData.id).subscribe({
+    this.http.updateData(this.form.value, this.editData.key).subscribe({
       next: (res: any) => {
         console.log("Product has been updated", res);
         this.form.reset();
